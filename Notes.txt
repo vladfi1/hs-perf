@@ -1,0 +1,9 @@
+Installation
+------------
+
+* To install cuda, wine must be removed due to conflicting opencl files.
+* Because of an update to OpenGLRaw, we need to limit OpenGLRaw < 2.0. As of 7/15 this may no longer be true.
+* Possibly due to a cuda installer bug, you need to manually run
+    sudo ldconfig /usr/local/cuda/lib[64]
+* Don't forget to follow the nvidia post-install instructions! Namely, 
+  add /usr/local/cuda/bin to the PATH in order to get nvcc.

@@ -31,6 +31,7 @@ mult m v = fold1 (+) $ zipWith (*) m vs
     n = indexHead . indexTail $ shape m
     vs = rows n v
 
+-- testing
 
 vec :: Array (Z :. Int) Int
 vec = fromList (Z :. (3 :: Int)) [1, 2, 3]
@@ -42,5 +43,9 @@ result = run $ mult (use mat) (use vec)
 
 testMult n m = sum $ mult (use mat) (use vec)
   where
-    mat = fromList (Z :. m :. n) [(1::Double)..]
-    vec = fromList (Z :. n) [1..]
+    mat = fromList (Z :. m :. n) [(1::Int)..]
+    vec = fromList (Z :. n) [(1::Int)..]
+
+-- making this bigger may cause problems :(
+testRows = 1000
+testCols = 10000

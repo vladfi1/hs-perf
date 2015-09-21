@@ -2,6 +2,8 @@
 
 module Main where
 
+import LinAlg (testCols, testRows)
+
 import Numeric.LinearAlgebra.Data
 import Numeric.LinearAlgebra.HMatrix
 
@@ -14,4 +16,4 @@ testMult n m = sum $ mat #> vec
     mat = matrix n $ fmap fromIntegral [1..(n*m)]
     vec = fromList $ fmap fromIntegral [1..n]
 
-main = print $ testMult 4000 1000
+main = print $ testMult testCols testRows

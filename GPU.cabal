@@ -19,7 +19,7 @@ library
   exposed-modules:     ANN, LinAlg
   -- other-modules:       
   -- other-extensions:    
-  build-depends:       base >=4.7, accelerate == 0.15.0.*, accelerate-cuda >= 0.15, MonadRandom >= 0.3
+  build-depends:       base >=4.7, accelerate == 0.15.0.*, accelerate-cuda >= 0.15, MonadRandom >= 0.3, linear >= 1.20, linear-accelerate == 0.2, cuda
   hs-source-dirs:      lib
   ghc-options:         -O
   default-language:    Haskell2010
